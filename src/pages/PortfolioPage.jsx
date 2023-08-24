@@ -1,8 +1,10 @@
-export const PortfolioPage = () => {
-  const mess = "There is no item found";
+import { CardList } from "../components/CardList";
+import Layout from "../components/Layout";
+
+export const PortfolioPage = ({ portfolioItems, onCardClick }) => {
   return (
-    <div>
-      <h1>{mess}</h1>
-    </div>
+    <Layout>
+      <CardList portfolioItems={portfolioItems} onCardClick={onCardClick} />
+    </Layout>
   );
 };
